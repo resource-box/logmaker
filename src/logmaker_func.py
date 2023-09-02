@@ -5,6 +5,10 @@ class LogMaker:
     def __init__(self, log_dir):
         self.log_dir = log_dir
 
+class LogMakerTxt(LogMaker):
+    def __init__(self, log_dir):
+        super().__init__(log_dir)
+
     def LogFunction(self, function):
         script = sys.argv[0]
         function_name = None
@@ -77,6 +81,6 @@ if __name__ == "__main__":
         for i in range(1000000):
             print("Hello, World!")
 
-    log_dir = "./logs"
-    logger = LogMaker(log_dir)
+    log_dir = "resourcebox/logmaker/src/logs"
+    logger = LogMakerTxt(log_dir)
     logger.LogFunction(demo_function)
