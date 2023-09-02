@@ -1,0 +1,30 @@
+
+=======================================================
+
+ ____ ____ ____  __  _  _ ____  ___ ____ ____  __ _  _ 
+(  _ (  __/ ___)/  \/ )( (  _ \/ __(  __(  _ \/  ( \/ )
+ )   /) _)\___ (  O ) \/ ()   ( (__ ) _) ) _ (  O )  ( 
+(__\_(____(____/\__/\____(__\_)\___(____(____/\__(_/\_)
+
+
+======================= v1.0.0 =======================
+
+script: /Users/kimdohoon/.pyenv/versions/3.7.16/envs/airflow/lib/python3.7/site-packages/ipykernel_launcher.py
+function: demo_function
+
+runtime: 1.76 sec
+Start time : 2023-09-02 23:58:06.065249
+End time : 2023-09-02 23:58:07.829921
+
+result: succeed
+error: None
+
+Total CPU usage: 15.6%
+Total Memory usage: 79.2%
+
+Network sent: 489.41 mb
+Network received: 1568.84 mb
+
+Return : None
+
+===============================================
