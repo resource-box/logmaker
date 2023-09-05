@@ -135,4 +135,4 @@ if __name__ == "__main__":
     logger_2 = LogMakerCsv(csv_dir=csv_dir)
 
     logger_2.LogFunction(0.2, demo_function)
-    # logger_1.LogFunction(demo_function)
+    logger_1.LogFunction(demo_function)
