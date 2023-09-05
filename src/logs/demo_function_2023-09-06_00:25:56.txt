@@ -1,0 +1,29 @@
+
+=======================================================
+       __                             _             
+      / /  ___   __ _ _ __ ___   __ _| | _____ _ __ 
+     / /  / _ \ / _` | '_ ` _ \ / _` | |/ / _ | '__|
+    / /__| (_) | (_| | | | | | | (_| |   |  __| |   
+    \____/\___/ \__, |_| |_| |_|\__,_|_|\_\___|_|   
+                |___/                               
+======================= v1.0.0 =======================
+
+script: /Users/kimdohoon/git/resourcebox/logmaker/src/logmaker_func.py
+function: demo_function
+
+runtime: 9.60 sec
+Start time : 2023-09-06 00:25:46.390970
+End time : 2023-09-06 00:25:55.990559
+
+result: succeed
+error: None
+
+Total CPU usage: 11.3%
+Total Memory usage: 78.8%
+
+Network sent: 1395.44 mb
+Network received: 2093.69 mb
+
+Return : None
+
+===============================================
