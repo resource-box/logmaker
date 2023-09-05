@@ -1,0 +1,7 @@
+setup.py
+logmaker/__init__.py
+logmaker/logmaker.py
+logmaker.egg-info/PKG-INFO
+logmaker.egg-info/SOURCES.txt
+logmaker.egg-info/dependency_links.txt
+logmaker.egg-info/top_level.txt
