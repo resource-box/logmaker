@@ -11,4 +11,4 @@ csv_dir = "resourcebox/logmaker/demo/logs"
 logger_2 = logmaker.LogMakerCsv(csv_dir=csv_dir)
 
 logger_2.LogFunction(0.2, demo_function)
-# logger_1.LogFunction(demo_function)
+logger_1.LogFunction(demo_function)
