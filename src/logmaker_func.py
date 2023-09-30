@@ -10,7 +10,7 @@ class LogMakerTxt(LogMaker):
     def __init__(self, log_dir):
         super().__init__(log_dir)
 
-    def LogFunction(self, function):
+    def LogFunction(self, function, *args):
         script = sys.argv[0]
         function_name = None
         if callable(function):
@@ -22,7 +22,7 @@ class LogMakerTxt(LogMaker):
         start_datetime = datetime.fromtimestamp(start_time) # param
 
         try:
-            returned = function() # param
+            returned = function(args) # param
             result = "succeed" # param
             success = True # param
             error_msg = None # param
@@ -78,7 +78,7 @@ class LogMakerCsv(LogMaker):
     def __init__(self, csv_dir):
         super().__init__(csv_dir=csv_dir)
 
-    def LogFunction(self, duration:float, function):
+    def LogFunction(self, duration:float, function, *args):
 
         # get function name
         if callable(function):
@@ -101,7 +101,7 @@ class LogMakerCsv(LogMaker):
                 start_time = time.time()
 
                 # start thread
-                target_thread = threading.Thread(target=function)
+                target_thread = threading.Thread(target=function, args=args)
                 target_thread.start()
 
                 # file write
@@ -124,9 +124,9 @@ class LogMakerCsv(LogMaker):
 
 
 if __name__ == "__main__":
-    def demo_function():
+    def demo_function(sentences):
         for i in range(5000000):
-            print("Hello, World!")
+            print(sentences)
 
     log_dir = "resourcebox/logmaker/src/logs"
     logger_1 = LogMakerTxt(log_dir=log_dir)
@@ -134,5 +134,6 @@ if __name__ == "__main__":
     csv_dir = "resourcebox/logmaker/src/logs"
     logger_2 = LogMakerCsv(csv_dir=csv_dir)
 
-    logger_2.LogFunction(0.2, demo_function)
-    logger_1.LogFunction(demo_function)
+    sentences = "Hello, World!"
+    logger_2.LogFunction(duration=0.2, function=demo_function, args=sentences)
+    logger_1.LogFunction(function=demo_function, args=sentences)
